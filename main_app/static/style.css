@@ -1,0 +1,19 @@
+.index-head {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+}
+
+.search-div {
+    display: grid;
+    width: 50vw;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.search-title {
+    text-align: center;
+
+}
