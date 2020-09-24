@@ -21,6 +21,9 @@ Did you know that roughly 125 - 160 BILLION pounds of food goes to waste ever si
 - DjangoAuth
 - PostgreSQL
 
+# PiP3 Installs
+- pip3 install
+
 
 
 ## The Planning
