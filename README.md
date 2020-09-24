@@ -34,7 +34,7 @@ When we were given the topi of "Saving the world", we were surprised to find we 
 
 ### Division of responsibilities
 
-- Rather than completely diving up work and working alone, we decided to pair program our way through the whole project. We each took turns as the driver( writing the code), while the other two members of the team acted as navigators( googling, debugging and giving insight into what should be written). With 3 different members, all having a different point of view and skill set, we believe we were able to show off the best of our abilities and really work together as a team from start to finish.
+- Rather than completely dividing up work and working alone, we decided to pair program our way through the whole project. We each took turns as the driver( writing the code), while the other two members of the team acted as navigators( googling, debugging and giving insight into what should be written). With 3 different members, all having a different point of view and skill set, we believe we were able to show off the best of our abilities and really work together as a team from start to finish.
 
 
 ## The Dev Team
