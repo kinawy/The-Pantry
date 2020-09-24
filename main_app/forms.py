@@ -17,3 +17,23 @@ class SignUpForm(UserCreationForm):
 
 class PostForm(ModelForm):
     pass
+
+class SearchForm(forms.Form):
+    pass
+    #cats = [ 'grain',
+    # 'vegetables',
+    # 'fruits',
+    # 'dairy',
+    # 'meat',
+    # 'misc',]
+   
+#     category = forms.ChoiceField((
+#     ('grain','GRAIN'),
+#     ('vegetables', 'VEGETABLES'),
+#     ('fruits','FRUITS'),
+#     ('dairy','DAIRY'),
+#     ('meat','MEAT'),
+#     ('misc','MISCELLANEOUS')
+# ))
+    
+

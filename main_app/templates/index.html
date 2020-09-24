@@ -5,13 +5,15 @@
 
   <div class="container"> 
 
-    <form>
+    <form action="/search/" method="POST">
+    {% csrf_token %}
+    
       <div class="form-row text-center">
         <div class="col-4">
           <label for="category">Categories</label>
         </div>
         <div class="col-4">
-          <select class="form-control" id="category">
+          <select name="category"class="form-control" id="category">
             <option>grains</option>
             <option>vegetables</option>
             <option>fruits</option>
@@ -20,7 +22,7 @@
           </select>
         </div>
         <div class="col-4">
-          <a href="/search" class="btn btn-primary">Search</a>
+          <input type="submit" class="btn btn-primary">Search</input>
         </div>
       </div>
     </form>

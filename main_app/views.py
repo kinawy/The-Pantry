@@ -7,11 +7,13 @@ from django.contrib.auth.models import User
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django import forms
-from .forms import SignUpForm
+from .forms import SignUpForm, SearchForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Post
 import datetime
 from django.utils import timezone
+
+
 
 
 def login_view(request):
@@ -62,6 +64,10 @@ def index(request):
 
 
 def search(request):
+    post = Post
+    if request.method == 'POST':
+        print(request.POST.get('category'))
+        # form = SignUpForm(request.POST)
     return render(request, 'search.html')
 
 
