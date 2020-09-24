@@ -8,6 +8,8 @@ from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django import forms
 from .forms import SignUpForm
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import Post
 
 
 def login_view(request):
@@ -26,6 +28,7 @@ def login_view(request):
                     print('The account has been disabled')
             else:
                 print('The username and/or password is incorrect.')
+
         else:
             return render(request, 'login.html', {'form': form})
     else:  # it was a get request so send the empty login form
@@ -63,6 +66,7 @@ def search(request):
 @login_required
 def profile(request, username):
     user = User.objects.get(username=username)
+    post = Post.objects.filter(user=user)
     return render(request, 'profile.html', { 'username':username })
 
 
@@ -72,3 +76,16 @@ def signup(request):
 
 def login_page(request):
     return render(request, 'login.html')
+
+@method_decorator(login_required, name='dispatch')
+class PostCreate(CreateView):
+    model = Post
+    fields = ['category', 'itemName', 'weightQuantity', 'description']
+
+    def form_valid(self, form):
+        # This lets us catch the PK, if we didn't do this we'd have no way of accessing this pk from this CRUD right here
+        self.object = form.save(commit=False) # Don't post to DB until I say so, this is the form validation
+        self.object.user = self.request.user
+        user = self.object.user
+        self.object.save() # This gives us access to the PK thhrough the self.object
+        return HttpResponseRedirect('/user/'+str(user.username))
