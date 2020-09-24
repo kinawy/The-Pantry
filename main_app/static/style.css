@@ -47,8 +47,8 @@ body{
     font-family: 'Bitter', serif;
     
 }
-.card{
-    margin: 10%
+.search-div .card{
+    margin: 10%;
 }
 
 .container{
