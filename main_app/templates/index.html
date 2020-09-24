@@ -4,13 +4,31 @@
     
     {% block content %}
     <div class="container">
-    <form class="search-box">
-       <label for="search-input"></label>
-    <input value="">
+      
+        <form class="form-inline">
+          <div class="form-group">
+          <div class="col-auto my-1">
+        <label for="category">Category</label>
+        <select class="form-control " id="category">
+        
+          <option>grains</option>
+          <option>vegetables</option>
+          <option>fruits</option>
+          <option>dairy</option>
+          <option>meat</option>
+          </select>
+        </div>
+        <div class="col-auto my-1">
+        <button type="submit" class="btn btn-primary">Search</button>
+</div>
+        </form>
+      
+      </div>
+      </div>
 
-    <a href="/search" class="btn btn-primary">Search</a>
-
-    <h5>There is an excess amount of food waste happening directly at the source of the farm. Our goal is to give farms an easy way to post their data for the amount of food they will be wasting, so local food banks can receive this information and schedule a pickup. We are also expanding the donor capabilities to retail restaurants as well. The beauty of this will be the fact that this will be a standalone application & not require any actual API’s
+    <h5>There is an excess amount of food waste happening directly at the source of the farm. 
+      Our goal is to give farms an easy way to post their information for the amount of food that will go to waste, 
+       so local food banks can find it and schedule a pickup. 
 
     </h5>
   </form>
