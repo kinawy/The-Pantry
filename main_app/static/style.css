@@ -1,8 +1,29 @@
 #index-head {
     text-align: center;
-    text-shadow: 1px 1px black;
+    text-shadow: 2px 2px black;
     color: white;
-    margin-top: 5%
+    margin: 7%;
+}
+
+body{
+    background-image:url("assets/veggiesforapp.jpg");
+    /* color:white; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Bitter', serif;    
+}
+
+label{
+    font-size: 22px;
+    color: white;
+}
+
+h4{
+    margin-top: 10%;
+    font-size: 28px;
+    color: white;
+    font-style: italic;
+    text-align: center;
 }
 
 footer {
@@ -11,13 +32,16 @@ footer {
     position: absolute;
 }
 
+.container{
+    width: 50vw;
+}
+
 .search-div {
     display: grid;
     width: 50vw;
     grid-template-columns: 1fr 1fr;
     text-align: center;
-    color: black !important;
-    background: rgba(0, 0, 0, 0.26);
+    background: rgba(0, 0, 0, 0.4);
 }
 
 @media(max-width:900px){
@@ -26,47 +50,40 @@ footer {
     }
 }
 
-.search-title {
+.title {
     text-align: center;
     text-shadow: 1px 1px black;
     color: white;
-
-}
-.search-box{
-    margin-top: 20%;
-    
-    text-align:center;
+    margin-bottom: 5%;
 }
 
-body{
-    /* background:blue; */
-    background-image:url("assets/veggiesforapp.jpg");
-    /* color:white; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-family: 'Bitter', serif;
-    
+.card {
+    color: black;
 }
+
 .search-div .card{
     margin: 10%;
 }
 
-.container{
-    width: 50vw;
-    color: black !important;
+.profile {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2% ;
 }
 
-label{
-    font-size: 25px
+.profile .card{
+    margin-bottom: 40px;
 }
-h5{
-    margin-top: 10%;
-    font-size: 28px;
-    /* color: white; */
-    font-style: italic
+
+.signup {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2%;
 }
-.search-button{
-    justify-content: center;
-    align-items: center;
-    margin-left: ;
+
+.signup .helptext,li {
+    color: white;
+}
+
+.signup-text {
+    margin: 25px 0;
+    color: white;
 }

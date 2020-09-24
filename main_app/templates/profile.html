@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
+<div class="container profile">
+  <h3 class="title">Add a New Post</h3>
     <form>
       <div class="form-group">
         <label for="category">Category</label>
@@ -26,10 +27,12 @@
         <label for="description">Description</label>
         <textarea class="form-control" id="description" rows="3"></textarea>
       </div>
+      <div class="text-center">
         <button type="submit" class="btn btn-primary">Post</button>
+      </div>
     </form>
-    <h5 class="text-center">___________________________</h5>
-    <h1 class="text-center">{{ username }}'s Posts:</h1>
+    <h3 class="title">___________________________</h3>
+    <h3 class="title">{{ username }}'s Posts:</h3>
     <br>
     <div class="card">
       <div class="card-header">
@@ -38,14 +41,12 @@
       <div class="card-body">          
         <p class="card-text">We currently have 200 lbs of corn that will end up going to waste. Please reach out via email if they would be of use!</p>
         <p class="card-text">email: farmer@boys.com</p>
-        <form>
+        <form class="text-center">
               <input type="hidden" value="">
               <button href="#" class="btn btn-primary">delete</button>
         </form>
       </div>
     </div>
 </div>
-
-
 
 {% endblock %}
