@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.forms import ModelForm
 
+## Custom user signup form
+
 class SignUpForm(UserCreationForm):
     full_name = forms.CharField(max_length=30, required=True)
     farm_name = forms.CharField(max_length=40, required=True)

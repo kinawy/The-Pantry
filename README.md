@@ -20,9 +20,15 @@ Did you know that roughly 125 - 160 BILLION pounds of food goes to waste ever si
 - Django/ Python
 - DjangoAuth
 - PostgreSQL
+- Celery
+- DotEnv
+- gitignore
 
 # PiP3 Installs
-- pip3 install
+- pip3 install boto boto3 botocore django-celery-beat celery python-dotenv
+- pip3 install 'celery[sqs]'
+- pip3 install celery==5.0.0
+This is to set proper celery version, will not work other wise
 
 
 

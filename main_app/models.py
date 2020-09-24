@@ -12,6 +12,7 @@ CATEGORY_CHOICES = (
     ('misc','MISCELLANEOUS')
 )
 # Create your models here.
+# Requrired a created at and expiration_date for our scheduler
 class Post(models.Model):
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default='grain')
     itemName = models.CharField(max_length=100)
