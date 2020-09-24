@@ -87,5 +87,5 @@ class PostCreate(CreateView):
         self.object = form.save(commit=False) # Don't post to DB until I say so, this is the form validation
         self.object.user = self.request.user
         user = self.object.user
-        self.object.save() # This gives us access to the PK thhrough the self.object
+        self.object.save() # This gives us access to the PK through the self.object
         return HttpResponseRedirect('/user/'+str(user.username))

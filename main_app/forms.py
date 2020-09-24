@@ -15,11 +15,5 @@ class SignUpForm(UserCreationForm):
         model = User
         fields = ('username', 'full_name', 'farm_name', 'email', 'location', 'phone_number', 'password1', 'password2', )
 
-<<<<<<< HEAD
-
-# class PostForm(ModelForm):
-    
-=======
 class PostForm(ModelForm):
     pass
->>>>>>> e3cab28354c0520a69cf37d35928e59aff68ae6a
