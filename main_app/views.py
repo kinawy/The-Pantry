@@ -10,6 +10,8 @@ from django import forms
 from .forms import SignUpForm
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import Post
+import datetime
+from django.utils import timezone
 
 
 def login_view(request):
@@ -86,6 +88,7 @@ class PostCreate(CreateView):
         # This lets us catch the PK, if we didn't do this we'd have no way of accessing this pk from this CRUD right here
         self.object = form.save(commit=False) # Don't post to DB until I say so, this is the form validation
         self.object.user = self.request.user
+        self.object.expiration_date = timezone.now() + datetime.timedelta(days=1)
         user = self.object.user
         self.object.save() # This gives us access to the PK through the self.object
         return HttpResponseRedirect('/user/'+str(user.username))
