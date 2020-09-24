@@ -66,8 +66,8 @@ def search(request):
 @login_required
 def profile(request, username):
     user = User.objects.get(username=username)
-    post = Post.objects.filter(user=user)
-    return render(request, 'profile.html', { 'username':username })
+    posts = Post.objects.filter(user=user)
+    return render(request, 'profile.html', { 'username':username, 'posts':posts })
 
 
 def signup(request):
