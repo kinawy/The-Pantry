@@ -18,6 +18,10 @@ class Post(models.Model):
     weightQuantity = models.CharField(max_length=30)
     description = models.CharField(max_length=250)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    expiration_date = models.DateTimeField()
+
+    
     
     def __str__(self):
         return self.itemName
