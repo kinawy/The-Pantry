@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <h2>Sign Up</h2>
+  <form method="POST">
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit">Sign Up!</button>
+  </form>
+
+  <div>
+    <p>
+      If you'd like to sign up to donate food to your local food banks, and
+      those in need, please fill out the form above, and you will be registered.
+      All submissions will be removed automatically after 5 days to maintain
+      freshness, and prevent you from having to deal with people still reaching
+      out if it was sold quick, and you haven't deleted it.
+    </p>
+  </div>
+</div>
+{% endblock %}

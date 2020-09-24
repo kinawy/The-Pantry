@@ -4,10 +4,8 @@
   <head>
     <title>The Pantry</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;1,600&display=swap');
-        </style>
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -18,7 +16,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" href="/profile">Profile<span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="{% url 'profile' user.username %}">Profile<span class="sr-only">(current)</span></a>
             <a class="nav-link" href="/signup">Signup</a>
             <a class="nav-link" href="/login">Login</a>
           </div>
