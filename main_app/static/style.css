@@ -87,3 +87,8 @@ footer {
     margin: 25px 0;
     color: white;
 }
+
+.login {
+    background: rgba(0, 0, 0, 0.4);
+    padding: 2%;
+}
