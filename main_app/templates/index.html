@@ -1,40 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
-
     
-    {% block content %}
-    <div class="container">
-      
-        <form class="form-inline">
-          <div class="form-group">
-          <div class="col-auto my-1">
-        <label for="category">Category</label>
-        <select class="form-control " id="category">
-        
-          <option>grains</option>
-          <option>vegetables</option>
-          <option>fruits</option>
-          <option>dairy</option>
-          <option>meat</option>
+{% block content %}
+
+  <div class="container"> 
+
+    <form>
+      <div class="form-row text-center">
+        <div class="col-4">
+          <label for="category">Categories</label>
+        </div>
+        <div class="col-4">
+          <select class="form-control" id="category">
+            <option>grains</option>
+            <option>vegetables</option>
+            <option>fruits</option>
+            <option>dairy</option>
+            <option>meat</option>
           </select>
         </div>
-        <div class="col-auto my-1">
-        <button type="submit" class="btn btn-primary">Search</button>
-</div>
-        </form>
-      
+        <div class="col-4">
+          <a href="/search" class="btn btn-primary">Search</a>
+        </div>
       </div>
-      </div>
+    </form>
 
-    <h5>There is an excess amount of food waste happening directly at the source of the farm. 
-      Our goal is to give farms an easy way to post their information for the amount of food that will go to waste, 
-       so local food banks can find it and schedule a pickup. 
-
+    <h5>
+      There is an excess amount of food waste happening directly at the source of the farm. Our goal is to give farms an easy way to post their information for the amount of food that will go to waste, so local food banks can find it and schedule a pickup. 
     </h5>
-  </form>
 
   </div>
-        {% endblock %}
+
+{% endblock %}
     
        
     
