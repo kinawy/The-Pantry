@@ -51,9 +51,12 @@ When we were given the topi of "Saving the world", we were surprised to find we 
 - The Magnificent Margaret [github](https://github.com/margaret-jihua)
 - The Superb Sameh [github](https://github.com/kinawy)
 - The Lyrical Lizz [github](https://github.com/LizzWest)
+- The Task Master [github](https://github.com/anthonygregis)
+### Huge shoutout to Anthony and Pete, Anthony slogged through 3 different scheduling functions with me, and ultimately found the right syntax for Celery. Pete was able to help us figure out a custom search function, hope to fully implement it in the future
+
 
 
 ## Stretch goals
 
-- We want to implement the actual functionality of the search by category.
+- We want to implement the actual functionality of the search by category.(currently queries the db, but we aren't pulling the actual data for times sake)
 - We would like to add in the ability for retailers ( restaurants and stores) to also be able to post potentially wasted food for food banks to pick up.
