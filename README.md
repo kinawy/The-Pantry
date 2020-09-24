@@ -42,3 +42,9 @@ When we were given the topi of "Saving the world", we were surprised to find we 
 - The Magnificent Margaret [github](https://github.com/margaret-jihua)
 - The Superb Sameh [github](https://github.com/kinawy)
 - The Lyrical Lizz [github](https://github.com/LizzWest)
+
+
+## Stretch goals
+
+- We want to implement the actual functionality of the search by category.
+- We would like to add in the ability for retailers ( restaurants and stores) to also be able to post potentially wasted food for food banks to pick up.
