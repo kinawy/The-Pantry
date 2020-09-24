@@ -9,8 +9,36 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
+## This needed pip3 install celery[sqs]
+import os
+# Adds dotenv pacakage
+from dotenv import load_dotenv
+# Imports urllib which parses string into url format
+import urllib
 
 from pathlib import Path
+# Loads the new .env file, which stores our AWS keys
+load_dotenv()
+
+# OUR AWS keys
+AWS_ACCESS = os.getenv('AWS_ACCESS')
+AWS_SECRET = os.getenv('AWS_SECRET')
+
+# Sets a broker for celery, a required setting, that handles queing and informing celery of tasks created in Django and needed to be run
+
+CELERY_BROKER_URL = "sqs://{0}:{1}@".format(
+    urllib.parse.quote(AWS_ACCESS, safe=''),
+    urllib.parse.quote(AWS_SECRET, safe='')
+)
+
+# These are AWS related, settings for the sqs, which is message queueing service. A message queuing service is for storing messages in transit between computers.
+CELERY_BROKER_TRANSPORT_OPTIONS = {
+    'region': 'us-west-2',
+    'visibility_timeout': 3600,
+    'polling_interval': 10,
+    'queue_name_prefix': 'thepantry-',
+    'CELERYD_PREFETCH_MULTIPLIER': 0,
+}
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,6 +66,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
