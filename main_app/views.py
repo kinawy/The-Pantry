@@ -89,3 +89,12 @@ class PostCreate(CreateView):
         user = self.object.user
         self.object.save() # This gives us access to the PK through the self.object
         return HttpResponseRedirect('/user/'+str(user.username))
+
+@method_decorator(login_required, name='dispatch')
+class PostDelete(DeleteView):    
+    model = Post
+
+    def get_success_url(self):
+        self.object.user = self.request.user
+        user = self.object.user
+        return ('/user/'+str(user.username))
